@@ -70,5 +70,7 @@
         "tooltip": "PlatformIO: Rebuild IntelliSense Index",
         "commands": "platformio-ide.rebuildProjectIndex"
       }
-    ]
+    ],
+    "C_Cpp.default.compilerPath": "C:/Users/edlen/.platformio/packages/toolchain-xtensa-esp32/bin/xtensa-esp32-elf-gcc.exe",
+    "C_Cpp.intelliSenseEngine": "Tag Parser"
   }

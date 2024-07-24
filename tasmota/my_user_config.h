@@ -71,10 +71,18 @@
 #define WIFI_DNS               "192.168.1.1"     // [IpAddress4] If not using DHCP set DNS1 IP address (might be equal to WIFI_GATEWAY)
 #define WIFI_DNS2              "0.0.0.0"         // [IpAddress5] If not using DHCP set DNS2 IP address (might be equal to WIFI_GATEWAY)
 
-#define STA_SSID1              ""                // [Ssid1] Wi-Fi SSID
-#define STA_PASS1              ""                // [Password1] Wi-Fi password
-#define STA_SSID2              ""                // [Ssid2] Optional alternate AP Wi-Fi SSID
-#define STA_PASS2              ""                // [Password2] Optional alternate AP Wi-Fi password
+#ifndef STA_SSID1
+  #define STA_SSID1              ""                // [Ssid1] Wi-Fi SSID
+#endif
+#ifndef STA_PASS1
+  #define STA_PASS1              ""                // [Password1] Wi-Fi password
+#endif
+#ifndef STA_SSID2
+  #define STA_SSID2              ""                // [Ssid2] Optional alternate AP Wi-Fi SSID
+#endif
+#ifndef STA_PASS2
+  #define STA_PASS2              ""                // [Password2] Optional alternate AP Wi-Fi password
+#endif
 #define WIFI_AP_PASSPHRASE     ""                // AccessPoint passphrase. For WPA2 min 8 char, for open use "" (max 63 char).
 #define WIFI_CONFIG_TOOL       WIFI_RETRY        // [WifiConfig] Default tool if Wi-Fi fails to connect (default option: 4 - WIFI_RETRY)
                                                  // (WIFI_RESTART, WIFI_MANAGER, WIFI_RETRY, WIFI_WAIT, WIFI_SERIAL, WIFI_MANAGER_RESET_ONLY)
@@ -173,7 +181,9 @@
   #define CORS_DOMAIN            ""                // [Cors] CORS Domain for preflight requests
 
 // -- HTTP Options --------------------------------
-#define GUI_SHOW_HOSTNAME      false             // [SetOption53] Show hostname and IP address in GUI main menu
+#ifndef GUI_SHOW_HOSTNAME
+  #define GUI_SHOW_HOSTNAME      false             // [SetOption53] Show hostname and IP address in GUI main menu
+#endif
 
 // -- HTTP GUI Colors -----------------------------
 // HTML hex color codes. Only 3 and 6 digit hex string values are supported!! See https://www.w3schools.com/colors/colors_hex.asp
@@ -227,7 +237,9 @@
 #define KNX_ENHANCED           false             // [Knx_Enhanced] Enable KNX Enhanced Mode
 
 // -- mDNS ----------------------------------------
+#ifndef MDNS_ENABLED
 #define MDNS_ENABLED           false             // [SetOption55] Use mDNS (false = Disable, true = Enable)
+#endif
 
 // -- Time - Up to three NTP servers in your region
 #define NTP_SERVER1      "2.pool.ntp.org"        // [NtpServer1] Select first NTP server by name or IP address (135.125.104.101, 2001:418:3ff::53)

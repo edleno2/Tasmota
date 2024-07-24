@@ -587,9 +587,13 @@
 
 // xsns_34_hx711.ino
 #define D_HX_CAL_REMOVE "Remove weight"
-#define D_HX_CAL_REFERENCE "Load reference weight"
-#define D_HX_CAL_DONE "Calibrated"
+#define D_HX_CAL_LOAD_REFERENCE "Load reference weight..."
+#define D_HX_CAL_DONE "Calibrated..."
 #define D_HX_CAL_FAIL "Calibration failed"
+#define D_HX_CAL_WEIGHT_RANGE "Measurement outside of range"
+#define D_HX_CAL_NO_ZERO "Unstable values while calibrating"
+#define D_HX_CAL_WAIT_ZERO "Measuring zero weight..."
+#define D_HX_CAL_WEIGHING_REFERENCE "Measuring reference weight..."
 #define D_RESET_HX711 "Reset Scale"
 #define D_CONFIGURE_HX711 "Configure Scale"
 #define D_HX711_PARAMETERS "Scale parameters"
